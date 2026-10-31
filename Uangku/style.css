@@ -1,0 +1,234 @@
+/* =========================
+   PENGATURAN HALAMAN
+========================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f5;
+    color: #333;
+}
+
+/* =========================
+   BAGIAN HEADER
+========================= */
+header {
+    background-color: #176b45;
+    color: white;
+    text-align: center;
+    padding: 16px 15px;
+}
+
+header h1 {
+    margin: 5px 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* =========================
+   ISI HALAMAN
+========================= */
+main {
+    width: 92%;
+    max-width: 950px;
+    margin: 18px auto;
+}
+
+/* =========================
+   KARTU SALDO
+========================= */
+.saldo {
+    background-color: #176b45;
+    color: white;
+    padding: 16px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.saldo h3 {
+    margin: 5px 0;
+    font-size: 17px;
+}
+
+.saldo h1 {
+    font-size: 29px;
+    margin: 8px 0;
+}
+
+/* =========================
+   RINGKASAN UANG
+   MENGGUNAKAN FLEXBOX
+========================= */
+.ringkasan {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.kartu {
+    flex: 1;
+    background-color: white;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #e3eae5;
+}
+
+.kartu h3 {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.kartu p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #176b45;
+    margin: 8px 0;
+}
+
+/* =========================
+   FORM DAN RIWAYAT
+========================= */
+.form-transaksi,
+.riwayat {
+    background-color: white;
+    padding: 17px;
+    margin-bottom: 14px;
+    border-radius: 10px;
+    border: 1px solid #e3eae5;
+}
+
+h2 {
+    color: #176b45;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   FORM INPUT
+========================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccd5ce;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: white;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #238653;
+}
+
+/* =========================
+   TOMBOL
+========================= */
+button {
+    padding: 11px;
+    background-color: #176b45;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+button:hover {
+    background-color: #105536;
+}
+
+/* =========================
+   TABEL TRANSAKSI
+========================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    background-color: white;
+}
+
+th,
+td {
+    border: 1px solid #e1e7e2;
+    padding: 10px 7px;
+    text-align: center;
+    font-size: 14px;
+}
+
+th {
+    background-color: #e8f2eb;
+    color: #245c3c;
+}
+
+.hapus {
+    background-color: #d9534f;
+}
+
+.hapus:hover {
+    background-color: #bd3834;
+}
+
+/* =========================
+   BAGIAN FOOTER
+========================= */
+footer {
+    background-color: #e8eee9;
+    color: #555;
+    text-align: center;
+    padding: 12px;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* =========================
+   TAMPILAN HP
+========================= */
+@media (max-width: 650px) {
+    main {
+        width: 94%;
+    }
+
+    .ringkasan {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-transaksi,
+    .riwayat {
+        padding: 13px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 7px 4px;
+        font-size: 12px;
+    }
+}

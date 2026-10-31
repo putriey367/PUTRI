@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uangku - Keuangan Pribadi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Uangku</h1>
+        <p>Catat dan kelola uang pribadimu</p>
+    </header>
+
+    <main>
+
+        <section class="saldo">
+            <h3>Saldo Saat Ini</h3>
+            <h1 id="saldoSekarang">Rp 0</h1>
+        </section>
+
+        <section class="ringkasan">
+            <div class="kartu">
+                <h3>Uang Masuk</h3>
+                <p id="totalMasuk">Rp 0</p>
+            </div>
+
+            <div class="kartu">
+                <h3>Uang Keluar</h3>
+                <p id="totalKeluar">Rp 0</p>
+            </div>
+        </section>
+
+        <section class="form-transaksi">
+            <h2>Saldo Awal</h2>
+            <p>Masukkan jumlah uang yang kamu miliki saat mulai menggunakan Uangku.</p>
+
+            <form id="formSaldo">
+                <input type="number" id="saldoAwal"
+                    placeholder="Contoh: 500000" min="0" required>
+                <button type="submit">Simpan Saldo Awal</button>
+            </form>
+        </section>
+
+        <section class="form-transaksi">
+            <h2>Tambah Transaksi</h2>
+
+            <form id="formTransaksi">
+
+                <label for="tanggal">Tanggal</label>
+                <input type="date" id="tanggal" required>
+
+                <label for="jenis">Jenis Transaksi</label>
+                <select id="jenis" required>
+                    <option value="">Pilih jenis transaksi</option>
+                    <option value="masuk">Uang Masuk</option>
+                    <option value="keluar">Uang Keluar</option>
+                </select>
+
+                <label for="keterangan">Keterangan</label>
+                <input type="text" id="keterangan"
+                    placeholder="Contoh: Uang saku, belanja, bayar utang"
+                    required>
+
+                <label for="nominal">Nominal (Rp)</label>
+                <input type="number" id="nominal"
+                    placeholder="Masukkan jumlah uang"
+                    min="1" required>
+
+                <button type="submit">Simpan Transaksi</button>
+
+            </form>
+        </section>
+
+        <section class="riwayat">
+            <h2>Riwayat Transaksi</h2>
+
+            <label for="pilihBulan">Pilih Bulan</label>
+            <input type="month" id="pilihBulan">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tanggal</th>
+                        <th>Keterangan</th>
+                        <th>Jenis</th>
+                        <th>Nominal</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+
+                <tbody id="daftarTransaksi">
+                    <tr>
+                        <td colspan="5">Belum ada transaksi</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Uangku - Catatan Keuangan Pribadi</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
